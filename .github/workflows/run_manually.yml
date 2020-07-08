@@ -1,0 +1,9 @@
+name: Converter
+on: workflow_dispatch
+
+jobs:
+  do_convert:
+    runs-on: windows-latest
+    steps:
+    - name: Send Message 
+      run: curl https://sc.ftqq.com/${{ secrets.SCKEY }}.send?text=MessageFromGithubAction
